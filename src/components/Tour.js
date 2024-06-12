@@ -17,7 +17,7 @@ function Tour({ tour, onDeleteTour }) {
       <div className="tour-info">
         <h3>{tour.name}</h3>
         <p>{showMore ? tour.info : `${tour.info.substring(0, 196)}`}</p>
-        <button id={`see-more-${tour.id}`} onClick={handleShowMore}>{showMore ? 'See less' : 'See more'}</button>
+        <button id={`see-more-${tour.id}`} onClick={handleShowMore}>{showMore ? 'Show less' : 'See more'}</button>
         <button id={`delete-btn-${tour.id}`} className="delete-btn" onClick={handleDelete}>
           Delete Tour
         </button>
