@@ -16,7 +16,7 @@ function Tour({ tour, onDeleteTour }) {
       <img src={tour.image} alt={tour.name} />
       <div className="tour-info">
         <h3>{tour.name}</h3>
-        <p>{showMore ? tour.info : `${tour.info.substring(0, 200)}...`}</p>
+        <p>{showMore ? tour.info : `${tour.info.substring(0, 200)}`}</p>
         <button id={`see-more-${tour.id}`} onClick={handleShowMore}>{showMore ? 'See less' : 'Show more'}</button>
         <button id={`delete-btn-${tour.id}`} className="delete-btn" onClick={handleDelete}>
           Delete Tour
