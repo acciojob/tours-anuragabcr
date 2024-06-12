@@ -64,19 +64,27 @@ function App() {
   };
 
   if (isLoading) {
-    return <Loading />;
+    return(
+      <div id='main'>
+        <Loading />
+      </div>
+    )
   }
 
   if (tours.length === 0) {
     return (
-      <div className="empty-tours">
+      <div id='main' className="empty-tours">
         <h2>No tours left!</h2>
         <button onClick={() => window.location.reload()}>Refresh</button>
       </div>
     );
   }
 
-  return <Tours tours={tours} onDeleteTour={handleDeleteTour} />;
+  return (
+    <div id='main'>
+      <Tours tours={tours} onDeleteTour={handleDeleteTour} />
+    </div>
+  )
 }
 
 export default App;
